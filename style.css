@@ -1,0 +1,132 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: silver;
+    padding: 10px;
+}
+
+.header {
+    background-color: green;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: inline-flex;
+    padding: 0;
+}
+
+.sidebar {
+    height: 425px;
+    width: 25%;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px 0 0;
+}
+
+.main {
+    max-width: 100%;
+    height: 100%;
+    background-color: red;
+    display: inline-block;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.yellowBoxContainer {
+    display: inline-flex;
+    padding: 0;
+}
+
+.yellowBox {
+    max-width: 35%;
+    height: 275px;
+    background-color: yellow;
+    display: inline-flex;
+    margin: 0 20px 20px 0;
+}
+
+.content .main .yellowBoxContainer .yellowBox:nth-child(3) {
+    margin-right: 0;
+}
+
+.purpleBox {
+    max-width: 100%;
+    height: 150px;
+    background-color: purple;
+    display: block;
+    margin: 0;
+}
+
+.content .main .yellowBoxContainer:nth-child(2) .yellowBox:nth-child(2) {
+    background-color: red;
+}
+
+@media only screen and (max-width:480px) {
+    .header {
+        height: 125px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .yellowBoxContainer {
+        display: block;
+        margin-right: 20px;
+    }
+    .yellowBox {
+        max-width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    .purpleBox {
+        height: 100px;
+    }
+    .content .main .yellowBoxContainer:nth-child(2) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:481px) {
+    .sidebar {
+        display: none;
+    }
+    .yellowBoxContainer {
+        display: inline-flex;
+        margin-right: 20px;
+    }
+    .yellowBox {
+        max-width: 50%;
+        margin-bottom: 10px;
+    }
+    .purpleBox {
+        height: 100px;
+    }
+    .content .main .yellowBoxContainer:nth-child(1) .yellowBox:nth-child(2) {
+        display: none;
+    }
+    .content .main .yellowBoxContainer:nth-child(2) .yellowBox:nth-child(2) {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .content .main .yellowBoxContainer:nth-child(2) {
+        display: none;
+    }
+    .yellowBoxContainer {
+        display: inline-flex;
+        margin-right: 20px;
+    }
+    .content .main .yellowBoxContainer:nth-child(1) .yellowBox:nth-child(2) {
+        display: inline-flex;
+    }
+    .sidebar {
+        display: inline-block;
+    }
+}
